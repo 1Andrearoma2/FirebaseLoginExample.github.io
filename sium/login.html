@@ -1,18 +1,26 @@
 <html>
   <head>
-    <title>Login/Registration Form</title>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css-login.css">
   </head>
   <body>
-    <h1>Login Form</h1>
-    <form action="submit_form.php" method="post">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username">
-      <br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password">
-      <br>
-      <input type="submit" value="Login">
-      <input type="button" value="Register" onclick="window.location.href='register.html'">
-    </form>
+    <div class="backform" style="width: 80%; display: flex; flex-direction: column;">
+      <h1 class="Testo">Login Form</h1>
+      <form action="submit_form.php" method="post" style="flex: 1;">
+        <label for="username" class="login">Username:</label>
+        <br>
+        <input class="loginbtn" type="text" id="username" name="username" placeholder=" Username" style="width:100%;">
+        <br>
+        <label for="password" class="login">Password:</label>
+        <br>
+        <input type="password" id="password" name="password" placeholder=" Password" class="loginbtn" style="width:100%;">
+        <br>
+        <p>Do you don't have an account?</p>
+        <br>
+        <a href="register.html">Create an account!</a>
+        <br>
+        <input type="submit" value="Login" style="width:100%;">
+      </form>
+    </div>
   </body>
 </html>
