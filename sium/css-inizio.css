@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+/* Creiamo la barra in alto allo schermo */
+.top-bar {
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+  }
+  
+  .top-bar .btn {
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .top-bar .btn:hover {
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  h2 {
+    
+  }
