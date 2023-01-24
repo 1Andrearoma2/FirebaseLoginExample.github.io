@@ -22,38 +22,18 @@
         <input type="password" id="password" name="password" placeholder=" Password" class="loginbtn" style="width:100%;">
         <br>
         <p>Do you don't have an account?</p>
+        <p>Sign In with google</p>
+        <a href="#" onclick="google()" class="google">google</a>
         <br>
-        <a href="register.html">Create an account!</a>
+        <a href="register.html">or create an account!</a>
         <br>
         <input type="submit" value="Login" style="width:100%;">
       </form>
     </div>
+    <script src="/js-login.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
 
-    <!-- Scripts -->
-
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-    
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyBYL2IhO7yvCMsJvoSlmNa5TBauYdnn-zA",
-        authDomain: "sito-b48d3.firebaseapp.com",
-        projectId: "sito-b48d3",
-        storageBucket: "sito-b48d3.appspot.com",
-        messagingSenderId: "996571159670",
-        appId: "1:996571159670:web:36e4eeceb4a6a6f0e65357",
-        measurementId: "G-0VB19GKN6S"
-      };
-    
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
 
   </body>
 </html>
