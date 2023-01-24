@@ -5,7 +5,13 @@
   </head>
   <body>
     <div class="backform" style="width: 80%; display: flex; flex-direction: column;">
-      <h1 class="Testo">Login Form</h1>
+      <h1 class="Testo">Sign In With</h1>
+      <a href="">
+
+      </a>
+      <a href="">
+
+      </a>
       <form action="submit_form.php" method="post" style="flex: 1;">
         <label for="username" class="login">Username:</label>
         <br>
@@ -22,5 +28,32 @@
         <input type="submit" value="Login" style="width:100%;">
       </form>
     </div>
+
+    <!-- Scripts -->
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBYL2IhO7yvCMsJvoSlmNa5TBauYdnn-zA",
+        authDomain: "sito-b48d3.firebaseapp.com",
+        projectId: "sito-b48d3",
+        storageBucket: "sito-b48d3.appspot.com",
+        messagingSenderId: "996571159670",
+        appId: "1:996571159670:web:36e4eeceb4a6a6f0e65357",
+        measurementId: "G-0VB19GKN6S"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
   </body>
 </html>
