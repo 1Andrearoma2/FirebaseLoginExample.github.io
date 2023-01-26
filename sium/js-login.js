@@ -1,4 +1,5 @@
-  import {signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+import { initializeApp } from 'firebase/app';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
   
   const firebaseConfig = {
     apiKey: "AIzaSyBYL2IhO7yvCMsJvoSlmNa5TBauYdnn-zA",
@@ -13,26 +14,18 @@
 
   firebase.initializeApp(firebaseConfig);
 
-  var auth = firebase.auth();
-
-// Funzione per l'autenticazione con email e password
-function login() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-
-  auth.signInWithEmailAndPassword(email, password)
-    .then(function (user) {
-      // Reindirizzare alla pagina successiva dopo l'accesso
-      alert("User logged in!");
-    })
-    .catch(function (error) {
-      // Gestire gli errori
-      console.log(error.message);
-    });
-}
-
-// Assegnare la funzione di login all'evento onclick del bottone di login
-document.getElementById("login").addEventListener("click", login);
+  const auth = getAuth()
+  const loginUser = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+            console.log('user', userCredential)
+            history.push('/admin')
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.error(errorCode, errorMessage)
+        });
+    }
 
 
 

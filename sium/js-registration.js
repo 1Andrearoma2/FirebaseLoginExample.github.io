@@ -34,7 +34,6 @@ firebase.initializeApp(firebaseConfig);
     document.getElementById('registration').reset();
 
   }
-
   const saveMessages = (name, username, emailid, password) => {
     var newRegistrationForm = registrationFormDB.push();
 
