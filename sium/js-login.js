@@ -1,3 +1,5 @@
+  import {signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+  
   const firebaseConfig = {
     apiKey: "AIzaSyBYL2IhO7yvCMsJvoSlmNa5TBauYdnn-zA",
     authDomain: "sito-b48d3.firebaseapp.com",
@@ -11,19 +13,26 @@
 
   firebase.initializeApp(firebaseConfig);
 
-function google() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-firebase.auth().signInWithPopup(provider).then(function(result) {
-    // The signed-in user info.
-    var user = result.user;
-    console.log(user);
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  console.log(errorCode, errorMessage);
-});
+  var auth = firebase.auth();
+
+// Funzione per l'autenticazione con email e password
+function login() {
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(function (user) {
+      // Reindirizzare alla pagina successiva dopo l'accesso
+      alert("User logged in!");
+    })
+    .catch(function (error) {
+      // Gestire gli errori
+      console.log(error.message);
+    });
 }
+
+// Assegnare la funzione di login all'evento onclick del bottone di login
+document.getElementById("login").addEventListener("click", login);
 
 
 
