@@ -1,31 +1,51 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Login/Registration Form</title>
-    <link rel="stylesheet" href="css-register.css">
-  </head>
-  <body>
-    <h1>Registration Form</h1>
-    <form action="" id="registration">
-      <div class="alert">Your registration is done!</div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name">
-      <br>  
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username">
-      <br>
-      <label for="email">Email: </label>
-      <input type="text" id="email" name="email">
-      <br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password">
-      <br>
-      <label for="password">Confirm Password:</label>
-      <input type="password" id="confirm-password" name="confirm-password">
-      <br>
-      <input type="submit" value="Register">
-      <input type="button" value="Login" onclick="window.location.href='login.html'">
-    </form>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="/js-registration.js"></script>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign in</title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css-register.css">
+    </head>
+    <body>
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header">Sign in</h2>
+                </div>
+
+                <div id="form_content_container">
+                    <div id="form_content_inner_container">
+                        <input type="text" id="full_name" placeholder="Full name">
+                        <input type="text" id="username" placeholder="Username">
+                        <input type="email" id="email" placeholder="Email">
+
+                        <input type="password" id="password" placeholder="Password">
+                        <input type="password" id="confirm-password" placeholder="Confirm Password">
+
+                        <div id="button_container">
+                            <button onclick="register()">Register</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="login and registration.js"></script>
+
 </html>

@@ -17,12 +17,12 @@ html, body {
 }
 #content_container {
   width: 30%;
-  height: 70%;
+  height: 65%;
 }
 
 #form_container {
   width: 100%;
-  height: 100%;
+  height: 65%;
 
   background-color: #370617;
   box-shadow: 0 0 50px -20px #000;
@@ -105,18 +105,18 @@ input {
 
 #button_container {
   width: 100%;
-  height: 10%;
+  height: 15%;
 
-  background-image: linear-gradient(80deg, #FFBE0B, #FB5607 50%, #FF006E 50%, #8338EC);
+  background-image: linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
   color: #fff;
 
   float: left;
 
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 #button_container button {
-  width: 50%;
+  width: 100%;
   height: 100%;
   float: left;
 
