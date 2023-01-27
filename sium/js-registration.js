@@ -1,5 +1,12 @@
 const firebaseConfig = {
-    //firebase information
+  apiKey: "AIzaSyBYL2IhO7yvCMsJvoSlmNa5TBauYdnn-zA",
+  authDomain: "sito-b48d3.firebaseapp.com",
+  databaseURL: "https://sito-b48d3-default-rtdb.firebaseio.com",
+  projectId: "sito-b48d3",
+  storageBucket: "sito-b48d3.appspot.com",
+  messagingSenderId: "996571159670",
+  appId: "1:996571159670:web:95f1ace481693a49e65357",
+  measurementId: "G-M8CV3HFGVD"
   };
 
 firebase.initializeApp(firebaseConfig);
