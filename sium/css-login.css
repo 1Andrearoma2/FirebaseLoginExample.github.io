@@ -134,3 +134,27 @@ input {
   justify-content: center;
   align-items: center;
 }
+
+#alert {
+  width: auto;
+  height: 15%;
+  background-image: linear-gradient(85deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+  border-radius: 10px;
+}
+
+#logged {
+  display: block;
+  font-size: 15px;
+  font-family: Bowlby One SC;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

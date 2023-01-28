@@ -65,6 +65,8 @@ var firebaseConfig = {
       alert(error_message)
     })
   }
+
+  //----------------------------------------> LOGIN <------------------------------------------------------
   
   // Set up our login function
   function login () {
@@ -94,10 +96,20 @@ var firebaseConfig = {
   
       // Push to Firebase Database
       database_ref.child('users/' + user.uid).update(user_data)
+
   
       // DOne
-      alert('User Logged In!!')
-  
+      document.getElementById('form_header').innerHTML = 'Logged In!';
+
+      //redirect
+      setTimeout(function(){
+        if (email == 'admin@admin.com' && password == "adminadmin") {
+          window.location.href = ("https://console.firebase.google.com/u/0/project/sito-b48d3/overview"); 
+        } else {
+          window.location.href = '/home.html';
+        }
+    },500);
+    
     })
     .catch(function(error) {
       // Firebase will use this to alert of its errors
